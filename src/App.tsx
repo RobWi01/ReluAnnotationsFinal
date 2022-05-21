@@ -1,4 +1,4 @@
-import { DefaultXRControllers, Interactive, useXR, useXREvent, VRCanvas } from '@react-three/xr'
+import { DefaultXRControllers, Interactive, useXR, useXREvent, ARCanvas } from '@react-three/xr'
 import { Box, Plane } from 'drei/shapes'
 import { OrbitControls } from 'drei/OrbitControls'
 import { Text } from 'drei/Text'
@@ -318,7 +318,7 @@ export function App() {
         <h1>WebXR Particles</h1>
         <p>Hold trigger to pull particles</p>
       </div>
-      <VRCanvas>
+      <ARCanvas>
         <DefaultXRControllers />
         <Plane args={[55, 55, 25, 25]} rotation={[-Math.PI / 2, 0, 0]} attachArray={undefined} attachObject={undefined}>
           <meshPhongMaterial color="#222" attach="material" wireframe />
@@ -329,7 +329,7 @@ export function App() {
         <DotsRender />
         <pointLight position={[10, 10, 10]} />
         <color args={[0x000000] as any} attach="background" />
-      </VRCanvas>
+      </ARCanvas>
     </>
   )
 }
