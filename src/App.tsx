@@ -1,8 +1,8 @@
-import { DefaultXRControllers, Interactive, useXR, useXREvent, ARCanvas } from '@react-three/xr'
+import { DefaultXRControllers, Interactive, ARCanvas } from '@react-three/xr'
 // import { Box, Plane } from 'drei/shapes'
 // import { OrbitControls } from 'drei/OrbitControls'
 import { Text } from 'drei/Text'
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 // import { useFrame } from 'react-three-fiber'
 // import { BufferGeometry, InterleavedBuffer, InterleavedBufferAttribute, Vector3 } from 'three'
 
