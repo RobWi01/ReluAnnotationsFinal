@@ -19,10 +19,7 @@ loader.load(
   }
 );
 
-
-
 export default function () {
-  const welcome = useStore((state) => state.welcome)
   return (
     <>
       <VRCanvas sRGB>
@@ -39,28 +36,9 @@ export default function () {
           shadow-mapSize-height={2048}
           shadow-bias={-0.0001}
         />
-        <Physics
-          iterations={20}
-          tolerance={0.0001}
-          defaultContactMaterial={{
-            friction: 0.9,
-            restitution: 0.7,
-            contactEquationStiffness: 1e7,
-            contactEquationRelaxation: 1,
-            frictionEquationStiffness: 1e7,
-            frictionEquationRelaxation: 2,
-          }}
-          gravity={[0, -4, 0]}
-          allowSleep={false}
-          // Adjust to the headset refresh rate
-          step={1 / 90}>
           <mesh geometry={geometryMandible}>
             <meshStandardMaterial color="0xd3d3d3" />
           </mesh>
-        </Physics>
       </VRCanvas>
-      <div className="startup" style={{ display: welcome ? "block" : "none" }}>
-        * once in vr press trigger to start
-      </div>
     </>
   )}
