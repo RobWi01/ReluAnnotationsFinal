@@ -1,31 +1,10 @@
-// react-three-fiber is a way to express threejs declaratively: https://github.com/pmndrs/react-three-fiber
-import { useFrame, useLoader } from "@react-three/fiber"
-// use-cannon is a hook around the cannon.js physics library: https://github.com/pmndrs/use-cannon
-import { Physics, useSphere, useBox, usePlane } from "@react-three/cannon"
-// zustand is a minimal state-manager: https://github.com/pmndrs/zustand
-import create from "zustand"
-
-import * as THREE from "three"
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import React, { Suspense, useRef, useCallback, useMemo } from "react"
-import { VRCanvas, useXREvent, useXR, useController } from "@react-three/xr"
-import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
-import {FC, useEffect, useState} from 'react'
-import {BufferGeometry} from 'three'
+import { Physics } from "@react-three/cannon"
+import React from "react"
+import { VRCanvas } from "@react-three/xr"
 import {STLLoader} from 'three/examples/jsm/loaders/STLLoader'
 
-
-// const Model = ({fileUrl}) => {
-//   const [geometry, setGeometry] = useState<BufferGeometry>(null)
-
-//   useEffect(() => {
-//     const stlLoader = new STLLoader()
-//     stlLoader.load(fileUrl, geo => {
-//       setGeometry(geo)
-//     })
-//   }, [])}
-
 let geometryMandible = null
+const loader = new STLLoader();
 
 loader.load(
   "https://annosend.blob.core.windows.net/stl-files/Mandible.stl",
