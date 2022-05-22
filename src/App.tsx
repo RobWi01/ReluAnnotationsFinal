@@ -17,6 +17,7 @@ const buttonSize = [0.2, 0.1, 0.1]
 function Button(props: any) {
   const [hover, setHover] = useState(false)
   const [color, setColor] = useState<any>('blue')
+  console.log(hover);
 
   const onSelect = () => {
     setColor((Math.random() * 0xffffff) | 0)
@@ -40,7 +41,7 @@ function Button(props: any) {
 
 // const add3DSize(3ds: [number,number,number]): [number,number,number] => []
 
-const startingPoint = -buttonSize[0] * 1.5
+// const startingPoint = -buttonSize[0] * 1.5
 
 export default function App() {
   // Default values
