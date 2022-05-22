@@ -1,23 +1,26 @@
 {
-  "name": "particles",
+  "name": "react-xr-paddle-demo",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@react-three/xr": "3.5.0",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.4",
-    "@types/three": "0.140.0",
-    "drei": "2.2.21",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-scripts": "5.0.1",
-    "react-three-fiber": "6.0.13",
-    "three": "0.140.2",
-    "typescript": "4.6.4"
+    "@react-three/cannon": "1.1.0",
+    "@react-three/fiber": "7.0.1",
+    "@react-three/xr": "3.1.1",
+    "lerp": "1.0.3",
+    "lodash-es": "4.17.21",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "4.0.3",
+    "three": "0.129.0",
+    "zustand": "3.5.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "customize-cra": "^0.9.1",
+    "customize-cra-react-refresh": "^1.0.1",
+    "react-app-rewired": "^2.1.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
